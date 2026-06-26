@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "description": "Between life and death there is a library. Its shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices. Would you have done anything different, if you had the chance to undo your regrets?",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 2,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "description": "No matter your goals, Atomic Habits offers a proven framework for improving every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 3,
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "description": "A brief history of humankind. From a renowned historian comes a groundbreaking narrative of humanity's creation and evolution — a number one international and New York Times bestseller that explores how Homo sapiens came to dominate the planet.",
+    "category": "Science",
+    "available_quantity": 0,
+    "image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 4,
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "description": "Alicia Berenson's life is seemingly perfect. A famous painter married to an in-demand fashion photographer, she lives in a grand house overlooking a park in one of London's most desirable areas. One evening her husband Gabriel returns home late and Alicia shoots him five times in the face, and then never speaks another word.",
+    "category": "Story",
+    "available_quantity": 3,
+    "image_url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 5,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. A handbook of agile software craftsmanship packed with best practices and real-world examples of writing truly clean, maintainable code.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 6,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "Cosmos is one of the bestselling science books of all time. In clear-eyed prose, Sagan reveals a jewel-like blue world inhabited by a life form that is just beginning to discover its own existence and to venture into the immensity of space.",
+    "category": "Science",
+    "available_quantity": 6,
+    "image_url": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 7,
+    "title": "Project Hail Mary",
+    "author": "Andy Weir",
+    "description": "A lone astronaut must save the earth from disaster in this incredible science-based thriller from the number one New York Times bestselling author of The Martian. Ryland Grace is the sole survivor on a desperate, last-chance mission — and if he fails, humanity and the Earth itself will perish.",
+    "category": "Story",
+    "available_quantity": 2,
+    "image_url": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 8,
+    "title": "The Pragmatic Programmer",
+    "author": "David Thomas and Andrew Hunt",
+    "description": "The Pragmatic Programmer is one of those rare tech books you will read, re-read, and read again over the years. The authors draw from their vast experience to recommend best practices and help develop good coding instincts that stand the test of time.",
+    "category": "Tech",
+    "available_quantity": 0,
+    "image_url": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 9,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "Was there a beginning of time? Could time run backwards? Is the universe infinite or does it have boundaries? These are just some of the questions considered in the internationally acclaimed masterpiece by the world renowned physicist, now updated with a new introduction.",
+    "category": "Science",
+    "available_quantity": 8,
+    "image_url": "https://images.unsplash.com/photo-1550399105-c4db5fb85c18?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 10,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "Set in the Jazz Age on Long Island, the novel depicts narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan. A timeless portrait of the American Dream and its discontents.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 11,
+    "title": "The Design of Everyday Things",
+    "author": "Don Norman",
+    "description": "Even the smartest among us can feel inept as we fail to figure out which light switch or oven burner to turn on, or whether to push, pull, or slide a door. The fault lies not in ourselves, but in product design that ignores the needs of users and the principles of cognitive psychology.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=900&fit=crop&auto=format"
+  },
+  {
+    "id": 12,
+    "title": "The Gene",
+    "author": "Siddhartha Mukherjee",
+    "description": "The story of the gene is the story of human ambition, curiosity, and perseverance. A deeply personal yet sweeping history of the discovery of the gene and a meditation on the future of our species, our societies, and our selves.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=900&fit=crop&auto=format"
+  }
+]

@@ -5,6 +5,7 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import BooksMarquee from "@/components/shared/BooksMarquee";
 
 // Body & UI font
 const inter = Inter({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col font-(--font-inter)">
         <Navbar></Navbar>
+        <BooksMarquee></BooksMarquee>
         <main className='min-h-screen'>
           {children}
         </main>

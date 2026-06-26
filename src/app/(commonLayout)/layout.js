@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import BooksMarquee from "@/components/shared/BooksMarquee";
+import NextThemeProvider from "@/providers/NextThemeProvider";
 
 // Body & UI font
 const inter = Inter({
@@ -28,18 +29,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      data-theme="light"
       lang="en"
       suppressHydrationWarning
       className={`${inter.variable} ${playfair.variable} h-screen antialiased`}
     >
       <body className="min-h-full flex flex-col font-(--font-inter)">
-        <Navbar></Navbar>
-        <BooksMarquee></BooksMarquee>
-        <main className='min-h-screen'>
-          {children}
-        </main>
-        <Footer></Footer>
+        <NextThemeProvider>
+          <Navbar />
+          <BooksMarquee />
+          <main className='min-h-screen'>
+            {children}
+          </main>
+          <Footer />
+        </NextThemeProvider>
       </body>
     </html>
   );

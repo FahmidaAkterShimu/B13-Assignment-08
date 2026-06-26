@@ -46,7 +46,7 @@ const heading = [
 
 const BooksMarquee = () => {
     return (
-        <div className='bg-primary text-primary-foreground overflow-hidden py-2.5 border-b border-primary/20'>
+        <div className='bg-primary text-primary-foreground overflow-hidden py-2.5'>
             <Marquee
                 speed={45}
                 gradient={false}

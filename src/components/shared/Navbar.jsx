@@ -44,14 +44,14 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="relative w-full bg-white z-50 py-3.5">
+        <nav className="relative w-full bg-background z-50 py-3.5">
             <div className="container mx-auto px-4 sm:px-6 lg:px-12">
                 <div className="flex justify-between items-center">
 
                     {/* LOGO */}
                     <div className="shrink-0">
                         <Link href="/" className="font-serif text-lg font-bold flex items-center gap-2">
-                            <Library className='w-7 h-7 text-[#2C5F2D]' />
+                            <Library className='w-7 h-7 text-primary' />
                             BookHaven
                         </Link>
                     </div>

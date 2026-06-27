@@ -83,7 +83,7 @@ export default function Navbar() {
                         {!isPending && !user ? (
                             <Link
                                 href="/login"
-                                className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all"
+                                className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold transition-all"
                             >
                                 <LogIn className="w-5 h-5" />
                                 Login
@@ -104,7 +104,7 @@ export default function Navbar() {
                                 {/* Logout */}
                                 <button
                                     onClick={handleLogout}
-                                    className="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all"
+                                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold transition-all"
                                 >
                                     Logout
                                 </button>
@@ -133,7 +133,7 @@ export default function Navbar() {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             type="button"
-                            className="inline-flex items-center justify-center p-2 rounded-md text-[#1A2E1E] hover:bg-gray-100 focus:outline-none transition-colors"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:bg-gray-100 focus:outline-none transition-colors"
                             aria-controls="mobile-menu"
                             aria-expanded={isOpen}
                         >
@@ -155,7 +155,7 @@ export default function Navbar() {
 
             {/* MOBILE MENU-DROPDOWN */}
             <div
-                className={`absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-md md:hidden transition-all duration-200 ease-in-out ${isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                className={`absolute top-20 left-0 w-full bg-background shadow-md md:hidden transition-all duration-200 ease-in-out rounded-lg ${isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                     }`}
                 id="mobile-menu"
             >
@@ -183,7 +183,7 @@ export default function Navbar() {
                         <Link
                             href="/login"
                             onClick={() => setIsOpen(false)}
-                            className="flex justify-center items-center gap-2 w-full mt-2 bg-[#2E6035] hover:bg-[#244B29] text-white text-center py-3.5 rounded-md text-base font-semibold transition-colors shadow-sm"
+                            className="flex justify-center items-center gap-2 w-full mt-2 bg-primary hover:bg-[#244B29] text-primary-foreground text-center py-3.5 rounded-md text-base font-semibold transition-colors shadow-sm"
                         >
                             <LogIn className="w-5 h-5" />
                             Login
@@ -194,7 +194,7 @@ export default function Navbar() {
                                 setIsOpen(false);
                                 handleLogout();
                             }}
-                            className="w-full mt-2 bg-[#2E6035] hover:bg-[#244B29] text-white text-center py-3.5 rounded-md text-base font-semibold transition-colors block shadow-sm"
+                            className="w-full mt-2 bg-primary hover:bg-[#244B29] text-primary-foreground text-center py-3.5 rounded-md text-base font-semibold transition-colors block shadow-sm"
                         >
                             Logout
                         </button>

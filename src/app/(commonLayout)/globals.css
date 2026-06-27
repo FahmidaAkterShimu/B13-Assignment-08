@@ -37,7 +37,7 @@
   --card: #161b22;
   --card-foreground: #f8fafc;
 
-  --border: #30363d;
+  /* --border: #30363d; */
 
   --primary: #3fb950;
   --primary-foreground: #ffffff;
@@ -78,13 +78,31 @@
   --font-body: var(--font-inter);
 }
 
+/* Book hover animation */
+@keyframes hoverBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+}
+
+.hover-bounce-once:hover {
+  animation: hoverBounce 0.8s ease;
+}
+
 /* =========================
    BASE
 ========================= */
 
-* {
+/* * {
   border-color: var(--border);
-}
+} */
 
 html {
   scroll-behavior: smooth;

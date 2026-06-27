@@ -44,7 +44,7 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="relative w-full bg-background z-50 py-3.5">
+        <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-xl py-3.5">
             <div className="container mx-auto px-4 sm:px-6 lg:px-12">
                 <div className="flex justify-between items-center">
 

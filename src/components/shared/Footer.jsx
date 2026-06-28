@@ -59,7 +59,7 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom */}
-                <div className='border-t border-white/10 opacity-40 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs'>
+                <div className='border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40'>
                     <p>© Since 2000 - {new Date().getFullYear()} BookHaven. All rights reserved.</p>
                     <p>Built with care for readers everywhere.</p>
                 </div>

@@ -13,7 +13,7 @@
   --card: #fff;
   --card-foreground: #1a1a1a;
 
-  /* --border: #e4e4e7; */
+  --border: #e4e4e7;
 
   --primary: #2c5f2d;
   --primary-foreground: #fff;
@@ -37,7 +37,7 @@
   --card: #161b22;
   --card-foreground: #f8fafc;
 
-  /* --border: #30363d; */
+  --border: #30363d;
 
   --primary: #3fb950;
   --primary-foreground: #ffffff;

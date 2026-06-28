@@ -1,10 +1,11 @@
 import Banner from "@/components/modules/Home/Banner";
-import Image from "next/image";
+import Stats from "@/components/modules/Home/Stats";
 
 export default function Home() {
   return (
     <section>
       <Banner />
+      <Stats />
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import Banner from "@/components/modules/Home/Banner";
+import SimpleProcess from "@/components/modules/Home/SimpleProcess";
 import Stats from "@/components/modules/Home/Stats";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <section>
       <Banner />
       <Stats />
+      <SimpleProcess />
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import Banner from "@/components/modules/Home/Banner";
+import FeaturedBooks from "@/components/modules/Home/FeaturedBooks";
 import ReaderStories from "@/components/modules/Home/ReaderStories";
 import ReadyToStart from "@/components/modules/Home/ReadyToStart";
 import SimpleProcess from "@/components/modules/Home/SimpleProcess";
@@ -9,6 +10,7 @@ export default function Home() {
     <section>
       <Banner />
       <Stats />
+      <FeaturedBooks />
       <SimpleProcess />
       <ReaderStories />
       <ReadyToStart />

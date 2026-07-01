@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 const FeaturedBooks = async () => {
-    const res = await fetch("http://localhost:3000/book.json", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/book.json`, {
         cache: "no-cache"
     })
     const books = await res.json()

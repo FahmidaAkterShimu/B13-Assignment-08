@@ -51,7 +51,7 @@ const BookCard = ({ book }) => {
                         <BookMarked className='lucide lucide-book-marked w-3.5 h-3.5' /> {available_quantity} copies
                     </span>
                     <Link
-                        href={`/books/${id}`}
+                        href={`/book/${id}`}
                         className='text-sm font-semibold text-primary hover:text-primary/80 flex items-center gap-1 group/btn transition-colors'
                     >
                         Details <ChevronRight className='lucide lucide-chevron-right w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform' />

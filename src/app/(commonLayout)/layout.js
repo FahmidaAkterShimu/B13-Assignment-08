@@ -1,49 +1,21 @@
-import dns from "node:dns";
-dns.setServers(['8.8.8.8', '8.8.4.4']);
-
-import { Inter, Playfair_Display } from 'next/font/google'
-import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import BooksMarquee from "@/components/shared/BooksMarquee";
 import NextThemeProvider from "@/providers/NextThemeProvider";
 
-// Body & UI font
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-})
-
-// Primary heading font
-const playfair = Playfair_Display({
-  variable: '--font-playfair',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-})
-
-export const metadata = {
-  title: "Book Haven",
-  description: "Online Book Borrowing Platform",
+const MainLayout = ({ children }) => {
+  return (
+    <>
+      <NextThemeProvider>
+        <Navbar />
+        <BooksMarquee />
+        <main className='min-h-screen'>
+          {children}
+        </main>
+        <Footer />
+      </NextThemeProvider>
+    </>
+  );
 };
 
-export default function RootLayout({ children }) {
-  return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${inter.variable} ${playfair.variable} h-screen antialiased`}
-    >
-      <body className="min-h-full flex flex-col font-(--font-inter)">
-        <NextThemeProvider>
-          <Navbar />
-          <BooksMarquee />
-          <main className='min-h-screen'>
-            {children}
-          </main>
-          <Footer />
-        </NextThemeProvider>
-      </body>
-    </html>
-  );
-}
+export default MainLayout;

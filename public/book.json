@@ -7,6 +7,7 @@
     "category": "Story",
     "available_quantity": 4,
     "rating": 4.8,
+    "publication_year": 2020,
     "image_url": "https://ivereadthis.com/wp-content/uploads/sites/401/2021/08/IMG_7207.jpg"
   },
   {
@@ -17,6 +18,7 @@
     "category": "Tech",
     "available_quantity": 7,
     "rating": 4.9,
+    "publication_year": 2018,
     "image_url": "https://miro.medium.com/v2/resize:fit:1400/1*JJ4t6ltsJb-tfSQfmqO_PQ.jpeg"
   },
   {
@@ -27,6 +29,7 @@
     "category": "Science",
     "available_quantity": 3,
     "rating": 4.8,
+    "publication_year": 2011,
     "image_url": "https://www.ynharari.com/wp-content/uploads/2017/01/sapiens.png"
   },
   {
@@ -37,6 +40,7 @@
     "category": "Story",
     "available_quantity": 2,
     "rating": 4.6,
+    "publication_year": 2019,
     "image_url": "https://assets.benable.com/rec_object_photos/49979430/full_size/0389cfdee8cb60525784.jpeg"
   },
   {
@@ -47,6 +51,7 @@
     "category": "Tech",
     "available_quantity": 5,
     "rating": 4.7,
+    "publication_year": 2008,
     "image_url": "https://img.drz.lazcdn.com/static/mm/p/cd4f0fa91ffb1f1038812a934fd24a7e.jpg_720x720q80.jpg"
   },
   {
@@ -57,6 +62,7 @@
     "category": "Science",
     "available_quantity": 6,
     "rating": 4.9,
+    "publication_year": 1980,
     "image_url": "https://static-01.daraz.com.bd/p/5bfe122f5a373a93c4517294fdfac111.jpg"
   },
   {
@@ -67,6 +73,7 @@
     "category": "Story",
     "available_quantity": 3,
     "rating": 4.8,
+    "publication_year": 2021,
     "image_url": "https://preview.redd.it/project-hail-mary-andy-weir-pdf-v0-48dvjito71rg1.jpeg?auto=webp&s=294bad8bee18b68e95f9f2caa81e0fb039317d01"
   },
   {
@@ -77,6 +84,7 @@
     "category": "Tech",
     "available_quantity": 2,
     "rating": 4.9,
+    "publication_year": 1999,
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqtqoQC5CcNMN76SStdXXqlqgAolhUWgvA4qQfMF0EAGaBgrNp7Tuv8v4&s=10"
   },
   {
@@ -87,6 +95,7 @@
     "category": "Science",
     "available_quantity": 8,
     "rating": 4.7,
+    "publication_year": 1988,
     "image_url": "https://images.penguinrandomhouse.com/cover/9780553103748"
   },
   {
@@ -97,6 +106,7 @@
     "category": "Story",
     "available_quantity": 5,
     "rating": 4.5,
+    "publication_year": 1925,
     "image_url": "https://images-na.ssl-images-amazon.com/images/I/71X7HnBk6VL._AC_UL600_SR600,600_.jpg"
   },
   {
@@ -107,6 +117,7 @@
     "category": "Tech",
     "available_quantity": 4,
     "rating": 4.8,
+    "publication_year": 1988,
     "image_url": "https://pictures.abebooks.com/isbn/9780465050659-uk.jpg"
   },
   {
@@ -117,6 +128,7 @@
     "category": "Science",
     "available_quantity": 3,
     "rating": 4.6,
+    "publication_year": 2016,
     "image_url": "https://electricliterature.com/wp-content/uploads/2018/01/1*fZmLoe4VOn0cpN4mdvYYTg.jpeg"
   }
 ]

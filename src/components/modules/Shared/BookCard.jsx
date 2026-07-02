@@ -2,6 +2,7 @@ import { BookMarked, ChevronRight, Star } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import FiveStar from './FiveStar';
 
 const BookCard = ({ book }) => {
     const { id, image_url, category, title, author, rating, available_quantity } = book;
@@ -39,11 +40,7 @@ const BookCard = ({ book }) => {
                 </h3>
                 <p className='text-sm text-muted-foreground mb-2'>{author}</p>
                 <div className='flex items-center gap-1'>
-                    <Star className='lucide lucide-star w-3.5 h-3.5 fill-amber-400 text-amber-400' />
-                    <Star className='lucide lucide-star w-3.5 h-3.5 fill-amber-400 text-amber-400' />
-                    <Star className='lucide lucide-star w-3.5 h-3.5 fill-amber-400 text-amber-400' />
-                    <Star className='lucide lucide-star w-3.5 h-3.5 fill-amber-400 text-amber-400' />
-                    <Star className='lucide lucide-star w-3.5 h-3.5 fill-amber-200 text-amber-400' />
+                    <FiveStar />
                     <span className='text-xs text-muted-foreground ml-1'>{rating}</span>
                 </div>
                 <div className='mt-auto pt-4 flex items-center justify-between'>

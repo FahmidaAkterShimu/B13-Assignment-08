@@ -8,7 +8,7 @@ import './globals.css'
 const inter = Inter({
 	variable: '--font-inter',
 	subsets: ['latin'],
-    weight: ['400', '500', '600', '700'],
+	weight: ['400', '500', '600', '700'],
 })
 
 // Primary heading font
@@ -31,7 +31,9 @@ export default function RootLayout({ children }) {
 			className={`${inter.variable} ${playfair.variable} h-screen antialiased`}
 		>
 			<body className='min-h-full flex flex-col font-(--font-inter)'>
-				<main className='min-h-screen'>{children}</main>
+				<main className='min-h-screen'>
+					{children}
+				</main>
 			</body>
 		</html>
 	)

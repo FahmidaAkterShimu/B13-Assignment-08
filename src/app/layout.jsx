@@ -3,6 +3,7 @@ dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
+import { Toaster } from "sonner";
 
 // Body & UI font
 const inter = Inter({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
 				<main className='min-h-screen'>
 					{children}
 				</main>
+				 <Toaster position="top-right" richColors />
 			</body>
 		</html>
 	)

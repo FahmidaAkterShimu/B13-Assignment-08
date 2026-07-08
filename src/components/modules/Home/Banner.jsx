@@ -47,9 +47,11 @@ const Banner = () => {
                             Browse Now <ArrowRight />
                         </Link>
 
-                        <button className='border-2 border-white/40 hover:border-white/80 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 backdrop-blur hover:-translate-y-0.5'>
+                        <Link
+                        href="/register"
+                        className='border-2 border-white/40 hover:border-white/80 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 backdrop-blur hover:-translate-y-0.5'>
                             Create Account
-                        </button>
+                        </Link>
                     </div>
                 </div>
 

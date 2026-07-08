@@ -41,7 +41,7 @@ const SingleBookDetails = async ({ params }) => {
 
                         <Link
                             href="/books"
-                            className="inline-flex items-center gap-2 rounded-xl border border-border bg-card hover:bg-accent text-foreground font-medium px-6 py-3 transition-all duration-200"
+                            className="inline-flex items-center gap-2 rounded-xl border border-border bg-card hover:bg-primary/50 text-foreground font-medium px-6 py-3 transition-all duration-200"
                         >
                             <Search className="w-4 h-4" />
                             Browse Books

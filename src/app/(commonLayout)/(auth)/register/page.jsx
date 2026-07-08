@@ -26,6 +26,7 @@ const RegisterPage = () => {
                 name: data.name,
                 email: data.email,
                 password: data.password,
+                image: photo,
                 callbackURL: "/",
             });
 
@@ -117,7 +118,7 @@ const RegisterPage = () => {
                             <input
                                 {...register('image')}
                                 name='image'
-                                type='url'
+                                type='text'
                                 placeholder='https://...'
                                 className='w-full border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-background transition-all text-sm'
                             />

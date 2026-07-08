@@ -7,11 +7,8 @@ import { useForm } from 'react-hook-form';
 import { authClient } from '@/lib/auth-client';
 import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useRouter } from 'next/navigation';
 
 const RegisterPage = () => {
-    const router = useRouter()
-
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -32,19 +29,27 @@ const RegisterPage = () => {
                 callbackURL: "/",
             });
 
-            console.log("signup response:", res);
-
             if (res?.data) {
-                alert("Account created successfully");
+                toast.success("Account created successfully");
             } else if (res?.error) {
                 console.log(res.error);
-                alert(res.error.message || "Signup failed");
+                toast.error(res.error.message || "Signup failed");
             }
-        } catch (error) {
+        }
+
+        catch (error) {
             console.error("Signup error:", error);
-            alert("Something went wrong");
+            toast.error("Something went wrong");
         }
     };
+
+    // Google Sign in
+    const handleGoogleSignin = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+            callbackURL: '/',
+        });
+    }
 
     return (
         <div className='min-h-[80vh] flex items-center justify-center px-4 py-16'>
@@ -178,6 +183,7 @@ const RegisterPage = () => {
 
                     {/* Register with Google */}
                     <button
+                        onClick={handleGoogleSignin}
                         type='button'
                         className='w-full border border-border rounded-xl py-3 flex items-center justify-center gap-3 hover:bg-[#FFB900]/10 transition-colors font-medium text-sm cursor-pointer'
                     >

@@ -7,11 +7,9 @@ import { useForm } from 'react-hook-form';
 import { authClient } from '@/lib/auth-client';
 import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useRouter } from 'next/navigation';
+
 
 const LoginPage = () => {
-    const router = useRouter()
-
     const [showPassword, setShowPassword] = useState(false);
 
     const {

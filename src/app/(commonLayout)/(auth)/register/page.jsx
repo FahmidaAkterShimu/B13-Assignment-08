@@ -77,7 +77,6 @@ const RegisterPage = () => {
                                 {...register('name', {
                                     required: 'Full name is required',
                                 })}
-                                name='name'
                                 type='text'
                                 placeholder='Your Name'
                                 className='w-full border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-background transition-all text-sm'
@@ -98,7 +97,6 @@ const RegisterPage = () => {
                                 {...register('email', {
                                     required: 'Email is required',
                                 })}
-                                name='email'
                                 type='email'
                                 placeholder='you@gmail.com'
                                 className='w-full border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-background transition-all text-sm'
@@ -117,7 +115,6 @@ const RegisterPage = () => {
                             </label>
                             <input
                                 {...register('image')}
-                                name='image'
                                 type='text'
                                 placeholder='https://...'
                                 className='w-full border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-background transition-all text-sm'
@@ -137,7 +134,6 @@ const RegisterPage = () => {
                                         message: 'Password must be at least 6 characters',
                                     },
                                 })}
-                                name='password'
                                 type={showPassword ? 'text' : 'password'}
                                 placeholder='Min. 6 characters'
                                 className='w-full border border-border rounded-xl px-4 py-3 pr-12 outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-background transition-all text-sm'

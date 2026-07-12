@@ -67,7 +67,6 @@ const LoginPage = () => {
                         <div>
                             <label className='block text-sm font-semibold mb-2'>Email</label>
                             <input
-                                name='email'
                                 type='email'
                                 placeholder='you@gmail.com'
                                 {...register('email', {
@@ -86,7 +85,6 @@ const LoginPage = () => {
                         <div className='relative'>
                             <label className='block text-sm font-semibold mb-2'>Password</label>
                             <input
-                                name='password'
                                 type={showPassword ? 'text' : 'password'}
                                 placeholder='••••••••'
                                 {...register('password', {

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Library, LogIn } from 'lucide-react';
+import { Library, LogIn, User } from 'lucide-react';
 
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
@@ -93,7 +93,7 @@ export default function Navbar() {
                                 {/* Avatar */}
                                 <Link href="/profile">
                                     <Avatar
-                                        src={user?.image || undefined}
+                                        src={user?.image || <User className='w-5 h-5 text-primary' />}
                                         name={user?.name || 'User'}
                                         size="sm"
                                         color="success"
@@ -120,7 +120,7 @@ export default function Navbar() {
                         {!isPending && user && (
                             <Link href="/profile">
                                 <Avatar
-                                    src={user?.image || undefined}
+                                    src={user?.image || <User className='w-5 h-5 text-primary' />}
                                     name={user?.name || 'User'}
                                     size="sm"
                                     color="success"

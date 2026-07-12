@@ -19,7 +19,7 @@ const Books = ({ books }) => {
     }, [books, selectedCategory]);
 
     return (
-        <div className="container mx-auto px-4 lg:px-12 pb-10">
+        <div>
             {/* Mobile Filter */}
             <div className="lg:hidden bg-card border border-border rounded-2xl p-4 md:p-6 sticky top-24 mb-8">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">

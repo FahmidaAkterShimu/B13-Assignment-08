@@ -1,6 +1,4 @@
-import Books from '@/components/modules/AllBooks/Books';
 import BooksHeading from '@/components/modules/AllBooks/BooksHeading';
-import React from 'react';
 
 const BooksPage = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/book.json`, {
@@ -11,8 +9,7 @@ const BooksPage = async () => {
 
     return (
         <section>
-            <BooksHeading />
-            <Books books={books} />
+            <BooksHeading books={books} />
         </section>
     );
 };

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Library, LogIn, User } from 'lucide-react';
+import { Library, LogIn, LogOut, User } from 'lucide-react';
 
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
@@ -104,8 +104,9 @@ export default function Navbar() {
                                 {/* Logout */}
                                 <button
                                     onClick={handleLogout}
-                                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold transition-all"
+                                    className="flex justify-center items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold transition-all"
                                 >
+                                    <LogOut className="w-5 h-5" />
                                     Logout
                                 </button>
                             </>
@@ -194,8 +195,9 @@ export default function Navbar() {
                                 setIsOpen(false);
                                 handleLogout();
                             }}
-                            className="w-full mt-2 bg-primary hover:bg-[#244B29] text-primary-foreground text-center py-3.5 rounded-md text-base font-semibold transition-colors block shadow-sm"
+                            className="flex justify-center items-center gap-2 w-full mt-2 bg-primary hover:bg-[#244B29] text-primary-foreground text-center py-3.5 rounded-md text-base font-semibold transition-colors shadow-sm"
                         >
+                            <LogOut className="w-5 h-5" />
                             Logout
                         </button>
                     )}

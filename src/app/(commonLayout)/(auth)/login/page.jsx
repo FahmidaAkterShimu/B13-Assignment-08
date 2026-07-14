@@ -5,11 +5,14 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { authClient } from '@/lib/auth-client';
-import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
+import { toast } from 'sonner';
 
 
 const LoginPage = () => {
+    const router = useRouter()
+
     const [showPassword, setShowPassword] = useState(false);
 
     const {
@@ -25,16 +28,16 @@ const LoginPage = () => {
             email: email,
             password: password,
             rememberMe: true,
-            callbackURL: "/",
         });
-        console.log(res, error)
 
         if (error) {
             toast.error(error.message);
             return;
         }
-
-        toast.success('Login successful');
+        else {
+            toast.success('✨ Welcome Back!');
+            router.push("/");
+        }
     };
 
     const handleGoogleLogin = async () => {

@@ -3,14 +3,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Library, LogIn, LogOut, User } from 'lucide-react';
+import { Library, LogIn, LogOut } from 'lucide-react';
 
 import { useRouter } from 'next/navigation';
-import { toast } from 'react-toastify';
 import ThemeToggler from '@/lib/ThemeToggler';
 import { authClient } from '@/lib/auth-client';
 
 import { Avatar } from '@heroui/react';
+import { toast } from 'sonner';
+import Image from 'next/image';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,6 @@ export default function Navbar() {
             fetchOptions: {
                 onSuccess: () => {
                     toast.success('Logged out successfully 👋');
-
                     router.push('/');
                     router.refresh();
                 },
@@ -79,8 +79,48 @@ export default function Navbar() {
                         {/* Theme Toggle */}
                         <ThemeToggler />
 
-                        {/* DESKTOP LOGIN/LOGOUT Button */}
-                        {!isPending && !user ? (
+                        {/* Loading skeleton */}
+                        {isPending && (
+                            <div className='h-10 w-24 animate-pulse rounded-2xl bg-primary/10' />
+                        )}
+
+
+                        {/* ── DESKTOP: Logged In ── */}
+                        {!isPending && user && (
+                            <div className='flex items-center gap-3'>
+                                {/* User Info */}
+                                <div className='flex items-center gap-2 hover:bg-[#FFB900]/10 rounded-lg px-3 py-2 transition-colors'>
+                                    {/* Avatar */}
+                                    <Link href="/profile" className='flex items-center justify-center'>
+                                        <Avatar
+                                            src={user?.image || undefined}
+                                            name={user?.name || 'User'}
+                                            size="sm"
+                                            color="success"
+                                            showFallback
+                                            className="w-8 h-8 rounded-full object-cover border border-border
+                                            cursor-pointer ring-2 ring-primary transition-transform hover:scale-105"
+                                        />
+                                    </Link>
+
+                                    <span className='text-sm font-semibold text-foreground'>
+                                        {user.name}
+                                    </span>
+                                </div>
+
+                                {/* Logout */}
+                                <button
+                                    onClick={handleLogout}
+                                    className="flex justify-center items-center gap-1.5 bg-primary hover:bg-[#FFB900]/10 text-primary-foreground
+                                    hover:text-foreground px-3 py-2 rounded-lg text-sm font-semibold transition-colors cursor-pointer"
+                                >
+                                    <LogOut className="w-5 h-5" />
+                                    Logout
+                                </button>
+                            </div>
+                        )}
+
+                        {!isPending && !user && (
                             <Link
                                 href="/login"
                                 className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold transition-all"
@@ -88,28 +128,6 @@ export default function Navbar() {
                                 <LogIn className="w-5 h-5" />
                                 Login
                             </Link>
-                        ) : (
-                            <>
-                                {/* Avatar */}
-                                <Link href="/profile">
-                                    <Avatar
-                                        src={user?.image || <User className='w-5 h-5 text-primary' />}
-                                        name={user?.name || 'User'}
-                                        size="sm"
-                                        color="success"
-                                        className="cursor-pointer ring-2 ring-primary transition-transform hover:scale-105"
-                                    />
-                                </Link>
-
-                                {/* Logout */}
-                                <button
-                                    onClick={handleLogout}
-                                    className="flex justify-center items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold transition-all"
-                                >
-                                    <LogOut className="w-5 h-5" />
-                                    Logout
-                                </button>
-                            </>
                         )}
 
                     </div>
@@ -121,7 +139,7 @@ export default function Navbar() {
                         {!isPending && user && (
                             <Link href="/profile">
                                 <Avatar
-                                    src={user?.image || <User className='w-5 h-5 text-primary' />}
+                                    src={user?.image || undefined}
                                     name={user?.name || 'User'}
                                     size="sm"
                                     color="success"
@@ -180,7 +198,7 @@ export default function Navbar() {
 
 
                     {/* MOBILE LOGIN/LOGOUT Button */}
-                    {!isPending && !user ? (
+                    {!user ? (
                         <Link
                             href="/login"
                             onClick={() => setIsOpen(false)}
@@ -195,7 +213,7 @@ export default function Navbar() {
                                 setIsOpen(false);
                                 handleLogout();
                             }}
-                            className="flex justify-center items-center gap-2 w-full mt-2 bg-primary hover:bg-[#244B29] text-primary-foreground text-center py-3.5 rounded-md text-base font-semibold transition-colors shadow-sm"
+                            className="flex justify-center items-center gap-2 w-full mt-2 bg-primary hover:bg-[#244B29] text-primary-foreground text-center py-3.5 rounded-md text-base font-semibold transition-colors shadow-sm cursor-pointer"
                         >
                             <LogOut className="w-5 h-5" />
                             Logout

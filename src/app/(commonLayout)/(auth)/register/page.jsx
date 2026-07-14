@@ -5,10 +5,13 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { authClient } from '@/lib/auth-client';
-import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
+import { toast } from 'sonner';
 
 const RegisterPage = () => {
+    const router = useRouter()
+
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -19,28 +22,34 @@ const RegisterPage = () => {
     } = useForm();
 
     const handleRegisterFunc = async (data) => {
-        setLoading(true);
-
         try {
-            const res = await authClient.signUp.email({
-                name: data.name,
-                email: data.email,
-                password: data.password,
-                image: data.image,
-                callbackURL: "/",
-            });
+            await authClient.signUp.email(
+                {
+                    name: data.name,
+                    email: data.email,
+                    password: data.password,
+                    image: data.image,
+                },
+                {
+                    onRequest: () => {
+                        setLoading(true)
+                    },
 
-            if (res?.data) {
-                toast.success("Account created successfully");
-            } else if (res?.error) {
-                console.log(res.error);
-                toast.error(res.error.message || "Signup failed");
-            }
-        }
+                    onSuccess: () => {
+                        setLoading(false)
+                        toast.success('Account created successfully! 🌸 Welcome to Book Haven')
+                            router.push("/");
+                    },
 
-        catch (error) {
-            console.error("Signup error:", error);
-            toast.error("Something went wrong");
+                    onError: (ctx) => {
+                        setLoading(false)
+                        toast.error(ctx.error.message ||'Registration failed. Please try again')
+                    },
+                },
+            )
+        } catch (err) {
+            setLoading(false)
+            toast.error('Something went wrong')
         }
     };
 
@@ -115,7 +124,7 @@ const RegisterPage = () => {
                             </label>
                             <input
                                 {...register('image')}
-                                type='text'
+                                type='url'
                                 placeholder='https://...'
                                 className='w-full border border-border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-background transition-all text-sm'
                             />

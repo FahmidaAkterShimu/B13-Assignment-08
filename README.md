@@ -10,7 +10,7 @@ BookHaven is a modern digital library platform designed to help users explore an
 
 ## 🌐 Live URL
 
-🔗 Live Site: [https://b13-assignment-08-five.vercel.app/]
+🔗 Live Site: https://b13-assignment-08-five.vercel.app/
 
 ## ✨ Key Features
 

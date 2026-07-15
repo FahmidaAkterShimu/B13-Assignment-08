@@ -1,9 +1,14 @@
+'use client';
 import { ArrowRight, Library } from 'lucide-react'
 import Image from 'next/image'
+import { authClient } from "@/lib/auth-client";
 import Link from 'next/link'
 
+const { useSession } = authClient;
 
 const Banner = () => {
+    const { data: session, isPending } = useSession();
+
     return (
         <header className='relative min-h-[88vh] flex items-center overflow-hidden bg-linear-to-br from-[#1a3a1a] via-[#2c5f2d] to-[#3d7a3e]'>
             {/* Background image */}
@@ -39,7 +44,7 @@ const Banner = () => {
                     </p>
 
                     {/* Buttons */}
-                    <div className='flex flex-wrap justify-center gap-4'>
+                    <div className='flex flex-wrap gap-4'>
                         <Link
                             href='/books'
                             className='bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold px-8 py-4 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-xl hover:shadow-amber-400/30 hover:-translate-y-0.5'
@@ -47,11 +52,14 @@ const Banner = () => {
                             Browse Now <ArrowRight />
                         </Link>
 
-                        <Link
-                        href="/register"
-                        className='border-2 border-white/40 hover:border-white/80 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 backdrop-blur hover:-translate-y-0.5'>
-                            Create Account
-                        </Link>
+                        {!isPending && !session && (
+                            <Link
+                                href="/register"
+                                className='border-2 border-white/40 hover:border-white/80 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 backdrop-blur hover:-translate-y-0.5'
+                            >
+                                Create Account
+                            </Link>
+                        )}
                     </div>
                 </div>
 

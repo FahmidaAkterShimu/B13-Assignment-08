@@ -97,7 +97,6 @@ export default function Navbar() {
                                             name={user?.name || 'User'}
                                             size="sm"
                                             color="success"
-                                            showFallback
                                             className="w-8 h-8 rounded-full object-cover border border-border
                                             cursor-pointer ring-2 ring-primary transition-transform hover:scale-105"
                                         />

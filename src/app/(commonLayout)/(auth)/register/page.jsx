@@ -38,7 +38,7 @@ const RegisterPage = () => {
                     onSuccess: () => {
                         setLoading(false)
                         toast.success('Account created successfully! 🌸 Welcome to Book Haven')
-                            router.push("/");
+                            router.push("/login");
                     },
 
                     onError: (ctx) => {

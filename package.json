@@ -12,6 +12,7 @@
     "@better-auth/mongo-adapter": "^1.6.11",
     "@heroui/react": "^3.1.0",
     "@heroui/styles": "^3.1.0",
+    "animate.css": "^4.1.1",
     "better-auth": "^1.6.23",
     "embla-carousel-react": "^8.6.0",
     "lucide": "^1.3.0",
@@ -25,7 +26,8 @@
     "react-hook-form": "^7.80.0",
     "react-icons": "^5.6.0",
     "react-toastify": "^11.1.0",
-    "sonner": "^2.0.7"
+    "sonner": "^2.0.7",
+    "swiper": "^14.0.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

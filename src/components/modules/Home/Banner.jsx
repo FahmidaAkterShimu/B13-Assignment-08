@@ -1,4 +1,6 @@
 'use client';
+
+import 'animate.css';
 import { ArrowRight, Library } from 'lucide-react'
 import Image from 'next/image'
 import { authClient } from "@/lib/auth-client";
@@ -30,7 +32,7 @@ const Banner = () => {
                     </div>
 
                     {/* Heading */}
-                    <h1 className='font-serif text-5xl lg:text-7xl font-bold text-white leading-[1.05] mb-6'>
+                    <h1 className='font-serif text-5xl lg:text-7xl font-bold text-white leading-[1.05] mb-6 animate__animated animate__zoomIn'>
                         Find Your
                         <br />
                         <span className='text-amber-300'>Next Great</span>
